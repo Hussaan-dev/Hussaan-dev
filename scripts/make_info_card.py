@@ -10,7 +10,7 @@ Writes:
 """
 import os
 
-# ---------- EDIT ME: your content ----------
+
 USERNAME = "hussaan-dev"
 FIELDS = [
     ("Now", "BS Computer Science @ GCU Lahore"),

@@ -16,8 +16,8 @@ OUT_PATH = "contrib-heatmap.svg"
 
 # Set both to None to show the full last-year calendar (blog default).
 # Set to "YYYY-MM-DD" strings to crop to a shorter window instead.
-START_DATE = "2026-06-01"
-END_DATE = None   # None = up through the most recent day in the data
+START_DATE = None
+END_DATE = None
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 #           none      lvl1       lvl2       lvl3       lvl4       lvl5 (neon top)
@@ -27,7 +27,7 @@ GAP = 3
 CELL = BOX + GAP
 LEFT_PAD = 30      # room for weekday labels
 TOP_PAD = 20        # room for month labels
-BOTTOM_PAD = 34     # room for legend + stats footer
+BOTTOM_PAD = 58     # room for legend row + stats footer row, stacked
 STAGGER = 0.006      # seconds between each box's reveal, driving the diagonal
 REVEAL_DUR = 0.35
 
@@ -150,13 +150,15 @@ def build_svg(data):
         lx += CELL
     parts.append(f'<text x="{lx + 4}" y="{legend_y + 8}" class="wk-label">More</text>')
 
-    # stats footer
+    # stats footer -- own line below the legend so it never collides with it,
+    # regardless of how narrow the SVG gets after date-range cropping
     if START_DATE or END_DATE:
         footer = f"{stats['total_last_year']} contributions shown"
     else:
         footer = f"{stats['total_last_year']} contributions in the last year"
+    footer_y = legend_y + 26
     parts.append(
-        f'<text x="{width - 10:.0f}" y="{legend_y + 8}" text-anchor="end" class="wk-label">{escape_xml(footer)}</text>'
+        f'<text x="{legend_x}" y="{footer_y:.0f}" class="wk-label">{escape_xml(footer)}</text>'
     )
 
     parts.append("</svg>")
