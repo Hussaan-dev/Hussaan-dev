@@ -1,42 +1,7 @@
 {
   "username": "Hussaan-dev",
-  "generated_at": "2026-08-01T08:33:10.459112Z",
+  "generated_at": "2026-08-02T08:36:20.720525Z",
   "days": [
-    {
-      "date": "2025-07-27",
-      "level": 0,
-      "label": "No contributions on July 27th."
-    },
-    {
-      "date": "2025-07-28",
-      "level": 0,
-      "label": "No contributions on July 28th."
-    },
-    {
-      "date": "2025-07-29",
-      "level": 0,
-      "label": "No contributions on July 29th."
-    },
-    {
-      "date": "2025-07-30",
-      "level": 0,
-      "label": "No contributions on July 30th."
-    },
-    {
-      "date": "2025-07-31",
-      "level": 0,
-      "label": "No contributions on July 31st."
-    },
-    {
-      "date": "2025-08-01",
-      "level": 0,
-      "label": "No contributions on August 1st."
-    },
-    {
-      "date": "2025-08-02",
-      "level": 0,
-      "label": "No contributions on August 2nd."
-    },
     {
       "date": "2025-08-03",
       "level": 0,
@@ -1854,18 +1819,22 @@
     },
     {
       "date": "2026-08-01",
-      "level": 1,
-      "label": "3 contributions on August 1st."
+      "level": 2,
+      "label": "4 contributions on August 1st."
+    },
+    {
+      "date": "2026-08-02",
+      "level": 0,
+      "label": "No contributions on August 2nd."
     }
   ],
   "stats": {
-    "total_last_year": 171,
-    "current_streak": 13,
+    "total_last_year": 172,
+    "current_streak": 0,
     "longest_streak": 13,
     "best_day": "2026-07-20",
     "best_day_count": 12,
     "monthly_totals": {
-      "2025-07": 0,
       "2025-08": 0,
       "2025-09": 0,
       "2025-10": 0,
@@ -1878,7 +1847,7 @@
       "2026-05": 0,
       "2026-06": 59,
       "2026-07": 103,
-      "2026-08": 3
+      "2026-08": 4
     }
   }
 }
